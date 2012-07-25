@@ -1,0 +1,16 @@
+<div id="todoList">
+
+    <h2>Liste des todos</h2>
+
+    <ul>
+        <li ng-repeat="todo in todos">
+            <a href="#/todo/{{todo.id}}"><span class="todoTitle">{{todo.title}}</span></a> :
+            <span class="todoDescription">{{todo.description | filter:ellipsis:40}}</span>
+        </li>
+    </ul>
+
+    <hr/>
+
+    <button ng-click="gotoTodoNewPage()" class="button">Ajouter</button>
+
+</div>

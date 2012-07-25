@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.thecodersbreakfast</groupId>
+    <artifactId>todo</artifactId>
+    <version>0.1</version>
+    <packaging>war</packaging>
+    <name>Angular.js + Spring REST integration</name>
+
+    <!-- ================================================================================ -->
+    <!-- Common properties -->
+    <!-- ================================================================================ -->
+    <properties>
+        <!-- Project properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.javaVersion>1.6</project.build.javaVersion>
+        <!-- Dependencies -->
+        <version.spring>3.1.2.RELEASE</version.spring>
+        <version.jackson>1.9.4</version.jackson>
+    </properties>
+
+    <!-- ================================================================================ -->
+    <!-- External additional maven repositories -->
+    <!-- ================================================================================ -->
+    <repositories>
+        <repository>
+            <id>jboss-public-repository</id>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <!-- ================================================================================ -->
+    <!-- Dependencies -->
+    <!-- ================================================================================ -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${version.spring}</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-expression</artifactId>-->
+            <!--<version>${version.spring}</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${version.spring}</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-aop</artifactId>-->
+            <!--<version>${version.spring}</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${version.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${version.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${version.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>${version.jackson}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${version.jackson}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- ================================================================================ -->
+    <!-- PLUGINS -->
+    <!-- ================================================================================ -->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${project.build.javaVersion}</source>
+                    <target>${project.build.javaVersion}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
