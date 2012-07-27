@@ -37,4 +37,10 @@ public class TodoController {
         todoRepository.put(id, todo);
     }
 
+    @RequestMapping(value = "/todo/{id}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable long id) {
+        todoRepository.remove(id);
+    }
+
 }
