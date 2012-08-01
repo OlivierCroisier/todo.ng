@@ -21,7 +21,6 @@ function TodoDetailController($scope, $routeParams, $location, Todo) {
 }
 
 function TodoNewController($scope, $location, Todo) {
-    $scope.project = {};
     $scope.submit = function () {
         Todo.save($scope.todo, function (todo) {
             $location.path('/');

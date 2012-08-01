@@ -5,7 +5,7 @@
     <ul>
         <li ng-repeat="todo in todos">
             <a href="#/todo/{{todo.id}}"><span class="todoTitle">{{todo.title}}</span></a> :
-            <span class="todoDescription">{{todo.description | filter:ellipsis:40}}</span> &nbsp;
+            <span class="todoDescription">{{todo.description | filter:ellipsis:20}}</span> &nbsp;
             <button class="button" ng-click="deleteTodo(todo)">X</button>
         </li>
     </ul>
